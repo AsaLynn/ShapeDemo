@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShapeDemo</string>
+    <string name="text_select_color">选择颜色</string>
+</resources>
