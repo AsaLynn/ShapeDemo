@@ -1,6 +1,7 @@
 package com.zxn.shape;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,12 +20,22 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
     @BindView(R.id.tv_select)
     TextView tvSelect;
+    @BindView(R.id.tv_gradient_drawable_code)
+    TextView tvGradientDrawableCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        GradientDrawable gradientDrawable = new GradientDrawable();
+        //gradientDrawable.setColor(getResources().getColor(R.color.c_f33925));
+        gradientDrawable.setColor(Color.parseColor("#2c9f67"));
+        gradientDrawable.setCornerRadius(getResources().getDimension(R.dimen.dp_5));
+        tvGradientDrawableCode.setBackgroundDrawable(gradientDrawable);
+
+
     }
 
     @OnClick(R.id.tv_select)
