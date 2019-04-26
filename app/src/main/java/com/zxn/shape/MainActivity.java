@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         gradientDrawable.setColor(Color.parseColor("#2c9f67"));
         gradientDrawable.setCornerRadius(getResources().getDimension(R.dimen.dp_5));
         tvGradientDrawableCode.setBackgroundDrawable(gradientDrawable);
-
-
     }
 
     @OnClick(R.id.tv_select)
